@@ -5,6 +5,7 @@
 On npm as [`sbs-view`](https://www.npmjs.com/package/sbs-view) — the command is
 `sbs`. See [About](#about) for why the names differ.
 
+[![npm](https://img.shields.io/npm/v/sbs-view.svg)](https://www.npmjs.com/package/sbs-view)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![node: >=20](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](package.json)
 [![dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](package.json)
