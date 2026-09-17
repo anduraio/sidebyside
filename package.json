@@ -1,0 +1,46 @@
+{
+  "name": "sbs-view",
+  "version": "1.0.0",
+  "description": "View two sites — or two local dev servers — side by side in one browser window.",
+  "type": "module",
+  "bin": {
+    "sbs": "bin/sbs.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "public",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node bin/sbs.js",
+    "test": "node --test test/",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "side-by-side",
+    "split-view",
+    "iframe",
+    "proxy",
+    "localhost",
+    "dev-server",
+    "x-frame-options",
+    "devtools",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anduraio/sidebyside.git"
+  },
+  "homepage": "https://github.com/anduraio/sidebyside#readme",
+  "bugs": {
+    "url": "https://github.com/anduraio/sidebyside/issues"
+  },
+  "license": "MIT",
+  "author": "anduraio <mirza00dhanu@gmail.com>"
+}

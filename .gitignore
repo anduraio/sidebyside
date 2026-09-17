@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+
+# Local Command Code state (learned preferences) — never part of the project
+.commandcode/taste/
