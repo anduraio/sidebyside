@@ -1,15 +1,15 @@
-# sbs
+# Side by Side
 
 **View two sites — or two local dev servers — side by side in one browser window.**
 
-On npm as [`sbs-view`](https://www.npmjs.com/package/sbs-view). The repository is
-[`sidebyside`](https://github.com/anduraio/sidebyside), the command is `sbs`.
+On npm as [`sbs-view`](https://www.npmjs.com/package/sbs-view) — the command is
+`sbs`. See [About](#about) for why the names differ.
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![node: >=20](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](package.json)
 [![dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](package.json)
 
-![sbs showing github.com in proxy mode beside nodejs.org in direct mode](docs/screenshot.png)
+![Side by Side comparing two versions of a game, with the pane toolbars hidden](docs/screenshot.jpg)
 
 ```bash
 sbs :3000 :5173
@@ -80,8 +80,8 @@ You rarely have to choose. When you enter an address, `sbs` checks whether the
 site can be framed at all. If it cannot, the pane switches itself to Proxy and
 tells you why, with an **Undo** button if you disagree.
 
-That is what the screenshot above shows: `github.com` was switched to Proxy
-automatically, while `nodejs.org` stayed Direct.
+Both modes are one click apart in each pane's toolbar, so the guess is always
+easy to override.
 
 ## Keyboard shortcuts
 
@@ -152,6 +152,29 @@ reach for it:
   the site off from its own scripts, which is worse than a missing shim.
 - Direct mode is subject to the browser's own iframe rules, which cannot be
   worked around by definition.
+
+## About
+
+It started as a small annoyance: comparing a dev server against production, or
+two branches, or two ports, meant juggling browser windows and losing track of
+which was which. Two panes in one window fixes that, and remembering what you
+had open means you rarely have to set it up twice.
+
+Side by Side runs entirely on your machine. Nothing is collected, nothing is
+sent anywhere, and the only network traffic is the two pages you asked for. The
+viewer binds to loopback so nothing else can reach it.
+
+There are no dependencies. The proxy, the URL rewriting and the UI are built on
+Node's standard library and the browser, which keeps the install to nothing and
+means `git clone` is a complete checkout.
+
+The name is spread across three namespaces, which is worth stating plainly:
+
+| | |
+| --- | --- |
+| Repository | [`sidebyside`](https://github.com/anduraio/sidebyside) |
+| Package | [`sbs-view`](https://www.npmjs.com/package/sbs-view) — `sidebyside` was already taken on npm |
+| Command | `sbs` |
 
 ## Development
 
